@@ -1,8 +1,8 @@
-noseX = 0
-noseY = 0
-difference = 0
-rightWristX = 0
-leftWristX = 0
+noseX = 0;
+noseY = 0;
+difference = 0;
+rightWristX = 0;
+leftWristX = 0;
 function setup(){
 video = createCapture(VIDEO);
 video.size(550,500);    
@@ -30,12 +30,12 @@ square(noseX,noseY,difference);
 }
 
 function gotPoses(results){
-if(results.lenght >0)
+if(results.length >0)
 {
   console.log(results);  
 noseX = results[0].pose.nose.x;
 noseY = results[0].pose.nose.y;
-console.log("noseX" + noseX + "noseY" + noseY);
+console.log("noseX = " + noseX + "noseY = " + noseY);
 
 leftWristX = results[0].pose.leftWrist.x;
 rightWristX = results[0].pose.rightWrist.x;
